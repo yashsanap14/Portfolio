@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yash Sanap - Professional Portfolio">
+    <title>Yash Sanap | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Ctext x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='white' text-anchor='middle'%3EYS%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="#home">Yash Sanap</a>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I'm</p>
+                    <h1 class="hero-name">
+                        <span class="name-line">Yash</span>
+                        <span class="name-line">Sanap</span>
+                    </h1>
+                    <div class="hero-title">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Passionate developer creating innovative solutions and bringing ideas to life through code.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/yash-sanap/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/yashsanap14" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="resume-link" aria-label="View Resume" onclick="event.preventDefault(); openResumeModal();">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
+                        <a href="mailto:yashsanap1404@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <div class="floating-skills">
+                            <div class="floating-skill" data-skill="python">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="floating-skill" data-skill="javascript">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="floating-skill" data-skill="react">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="floating-skill" data-skill="nodejs">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="floating-skill" data-skill="java">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="floating-skill" data-skill="git">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <div class="floating-skill" data-skill="docker">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <div class="floating-skill" data-skill="aws">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="floating-skill" data-skill="vue">
+                                <i class="fab fa-vue"></i>
+                            </div>
+                            <div class="floating-skill" data-skill="angular">
+                                <i class="fab fa-angular"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll down">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01.</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate developer with a strong foundation in software engineering and a keen interest 
+                        in creating innovative solutions. My journey in technology has been driven by curiosity and 
+                        a commitment to continuous learning.
+                    </p>
+                    <p>
+                        I enjoy working on challenging projects that push the boundaries of what's possible, and I'm always 
+                        looking for opportunities to collaborate with talented individuals and teams.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h3>Clean Code</h3>
+                                <p>Writing maintainable and scalable solutions</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <h3>Innovation</h3>
+                                <p>Bringing creative ideas to life</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h3>Collaboration</h3>
+                                <p>Working effectively in team environments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="Assets/my_img.jpeg" alt="Yash Sanap" class="about-profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02.</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Programming Languages
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="skill-name">C++</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-layer-group"></i>
+                        Frameworks & Libraries
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span class="skill-name">React</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span class="skill-name">Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-vue"></i>
+                            </div>
+                            <span class="skill-name">Vue.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-angular"></i>
+                            </div>
+                            <span class="skill-name">Angular</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Tools & Technologies
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <span class="skill-name">Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <span class="skill-name">AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="skill-name">MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square" style="color: #3178C6;"></i>
+                            </div>
+                            <span class="skill-name">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03.</span>
+                <h2 class="section-title">Experience</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="company-logo-wrapper">
+                                <img src="Assets/VB-Bug-Fullcolor.png" alt="City of Virginia Beach" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="company-logo-fallback" style="display: none; width: 50px; height: 50px; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9rem;">VB</div>
+                            </div>
+                            <div class="job-header-info">
+                                <h3 class="job-title">Data Science Intern</h3>
+                                <span class="company-name">City Of Virginia Beach IT</span>
+                                <span class="job-location">Virginia Beach, VA</span>
+                            </div>
+                            <span class="timeline-date">Jun 2025 – Aug 2025</span>
+                        </div>
+                        <ul class="job-description">
+                            <li>Analyzed multi-month Sentinel-5P satellite imagery using Python geospatial libraries (GeoPandas, Rasterio) to map NO2 pollution across Virginia; identified seasonal emission trends and regional hotspots for environmental monitoring</li>
+                            <li>Built automated end-to-end image segmentation pipeline for reservoir water-level monitoring: integrated automated dataset labeling (Roboflow + Grounding DINO) and trained YOLOv11+SAMv2 models, achieving 95% detection precision and 90% mAP</li>
+                            <li>Implemented time-series forecasting with Nixtla's TimeGPT to predict coastal water levels from historical trends, enabling proactive flood-risk management and timely community alerts</li>
+                            <li>Orchestrated scalable data workflows on cloud infrastructure: leveraged AWS SageMaker Studio Lab and Coiled (Dask) to process NOAA National Water Model forecasts for distributed analysis</li>
+                        </ul>
+                        <div class="job-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">GeoPandas</span>
+                            <span class="tag">YOLOv11</span>
+                            <span class="tag">TimeGPT</span>
+                            <span class="tag">AWS SageMaker</span>
+                            <span class="tag">Dask</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="company-logo-wrapper">
+                                <img src="Assets/capgemini.png" alt="Capgemini" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="company-logo-fallback" style="display: none; width: 50px; height: 50px; background: #FF6B35; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9rem;">C</div>
+                            </div>
+                            <div class="job-header-info">
+                                <h3 class="job-title">Data Scientist</h3>
+                                <span class="company-name">Capgemini Technology Services</span>
+                                <span class="job-location">Mumbai, India</span>
+                            </div>
+                            <span class="timeline-date">Aug 2022 – Jun 2024</span>
+                        </div>
+                        <ul class="job-description">
+                            <li>Developed and optimized end-to-end data pipelines using Google Colab, Python, and SQL to process, analyze, and visualize large datasets; improved model inference speed and accuracy through workflow optimization</li>
+                            <li>Designed and deployed cloud-native machine learning solutions on AWS (EC2, S3, Lambda, RDS) for real-time analytics, reducing operational costs by 30% while ensuring scalability and security</li>
+                            <li>Built and managed REST APIs to serve ML model predictions, enabling seamless microservice integration and enhancing data-driven decision-making across applications</li>
+                            <li>Implemented NLP and LLM-powered conversational AI systems, collaborating with UX teams to create intuitive, AI-driven chatbot experiences using Agile methodologies</li>
+                        </ul>
+                        <div class="job-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04.</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-provider">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle" class="provider-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="provider-fallback" style="display: none; width: 60px; height: 60px; background: #F80000; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">O</div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
+                            <p class="cert-issuer">Oracle</p>
+                        </div>
+                    </div>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Issued Oct 2025</span>
+                        </div>
+                        <div class="cert-skills">
+                            <span class="skill-tag">Artificial Intelligence (AI)</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Supervised Learning</span>
+                            <span class="skill-tag">Unsupervised Learning</span>
+                            <span class="skill-tag">OCI AI Services</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-provider">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle" class="provider-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="provider-fallback" style="display: none; width: 60px; height: 60px; background: #F80000; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">O</div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Oracle Cloud Infrastructure 2025 Certified Data Science Professional</h3>
+                            <p class="cert-issuer">Oracle</p>
+                        </div>
+                    </div>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Issued Oct 2025 · Expires Oct 2027</span>
+                        </div>
+                        <div class="cert-skills">
+                            <span class="skill-tag">Data Science</span>
+                            <span class="skill-tag">Data Preparation</span>
+                            <span class="skill-tag">Machine learning lifecycle management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-provider">
+                            <i class="fab fa-linkedin" style="font-size: 3rem; color: #0077b5;"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Build an AI Application with React and AWS SageMaker</h3>
+                            <p class="cert-issuer">LinkedIn</p>
+                        </div>
+                    </div>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Issued Jun 2025</span>
+                        </div>
+                        <div class="cert-skills">
+                            <span class="skill-tag">AWS SageMaker</span>
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Artificial Intelligence (AI)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-provider">
+                            <i class="fab fa-linkedin" style="font-size: 3rem; color: #0077b5;"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Learning Power BI Desktop</h3>
+                            <p class="cert-issuer">LinkedIn</p>
+                        </div>
+                    </div>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Issued Jun 2025</span>
+                        </div>
+                        <div class="cert-skills">
+                            <span class="skill-tag">Data Analytics</span>
+                            <span class="skill-tag">Data Visualization</span>
+                            <span class="skill-tag">Microsoft Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-provider">
+                            <img src="https://www.datacamp.com/favicon.ico" alt="DataCamp" class="provider-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="provider-fallback" style="display: none; width: 60px; height: 60px; background: #05192D; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">DC</div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">AI Fundamentals</h3>
+                            <p class="cert-issuer">DataCamp</p>
+                        </div>
+                    </div>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Issued Mar 2025</span>
+                        </div>
+                        <div class="cert-skills">
+                            <span class="skill-tag">Generative AI</span>
+                            <span class="skill-tag">Generative Adversarial Networks (GANs)</span>
+                            <span class="skill-tag">Transformers</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Supervised Learning</span>
+                            <span class="skill-tag">Unsupervised Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-provider">
+                            <i class="fab fa-linkedin" style="font-size: 3rem; color: #0077b5;"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Generative AI: The Evolution of Thoughtful Online Search</h3>
+                            <p class="cert-issuer">LinkedIn</p>
+                        </div>
+                    </div>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Issued Mar 2025</span>
+                        </div>
+                        <div class="cert-skills">
+                            <span class="skill-tag">Search Engine Technology</span>
+                            <span class="skill-tag">Artificial Intelligence for Business</span>
+                            <span class="skill-tag">Generative AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-provider">
+                            <i class="fab fa-docker" style="font-size: 3rem; color: #2496ED;"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Docker Foundations Professional Certificate</h3>
+                            <p class="cert-issuer">Docker, Inc</p>
+                        </div>
+                    </div>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Issued Feb 2025</span>
+                        </div>
+                        <div class="cert-skills">
+                            <span class="skill-tag">Containerization</span>
+                            <span class="skill-tag">DevOps</span>
+                            <span class="skill-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-provider">
+                            <i class="fab fa-microsoft" style="font-size: 3rem; color: #0078D4;"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Microsoft Certified: Azure Fundamentals</h3>
+                            <p class="cert-issuer">Microsoft</p>
+                        </div>
+                    </div>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Issued May 2023</span>
+                        </div>
+                        <div class="cert-skills">
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">Cloud Computing</span>
+                            <span class="skill-tag">Microsoft Azure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-header">
+                        <div class="cert-provider">
+                            <div class="provider-fallback" style="display: flex; width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1rem;">CP</div>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Intro to Android Development Course</h3>
+                            <p class="cert-issuer">CodePath</p>
+                        </div>
+                    </div>
+                    <div class="cert-details">
+                        <div class="cert-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed</span>
+                        </div>
+                        <div class="cert-skills">
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Application Programming Interfaces (API)</span>
+                            <span class="skill-tag">Version Control</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05.</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://www.loom.com/share/e54b47b45c7949f09aa93fb2efd340f2" target="_blank" class="project-video-link">
+                            <img src="https://cdn.loom.com/sessions/thumbnails/e54b47b45c7949f09aa93fb2efd340f2-18d75d43e4805736-full-play.gif" alt="SearchMind Demo" class="project-thumbnail">
+                            <div class="play-overlay">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Watch Demo</span>
+                            </div>
+                        </a>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yashsanap14/SearchMind.git" target="_blank" class="project-link" aria-label="View code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.loom.com/share/e54b47b45c7949f09aa93fb2efd340f2" target="_blank" class="project-link" aria-label="Watch video">
+                                    <i class="fas fa-video"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SearchMind 🔎🧠</h3>
+                        <p class="project-description">
+                            AI-powered web search and summarization with citations. Type or dictate your query, SearchMind fetches results, summarizes with Gemini AI, and stores history in Cloudflare D1. Features voice input, text-to-speech, and numbered citations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React 19</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Cloudflare Workers</span>
+                            <span class="tech-tag">Gemini AI</span>
+                            <span class="tech-tag">TailwindCSS</span>
+                            <span class="tech-tag">Cloudflare D1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://www.loom.com/share/00c744d6c9244b6bba52770cedf5d362" target="_blank" class="project-video-link">
+                            <img src="https://cdn.loom.com/sessions/thumbnails/00c744d6c9244b6bba52770cedf5d362-9a0a66018fd53bbc-full-play.gif" alt="UI Code Assistant Demo" class="project-thumbnail">
+                            <div class="play-overlay">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Watch Demo</span>
+                            </div>
+                        </a>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yashsanap14/UICoding_assistant.git" target="_blank" class="project-link" aria-label="View code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://mason.gmu.edu/~ppatil8" target="_blank" class="project-link" aria-label="View project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://www.loom.com/share/00c744d6c9244b6bba52770cedf5d362" target="_blank" class="project-link" aria-label="Watch video">
+                                    <i class="fas fa-video"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">UI Code Assistant</h3>
+                        <p class="project-description">
+                            An AI-like system that helps UI developers generate, analyze, and improve UI code. Features component generation, design analysis, code optimization, and accessibility checking. Supports multiple styling frameworks including Bootstrap and Tailwind CSS.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://academic-advisor-yashsanap14s-projects.vercel.app/" target="_blank" class="project-video-link">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </a>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yashsanap14/Academic-Advisor.git" target="_blank" class="project-link" aria-label="View code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://academic-advisor-yashsanap14s-projects.vercel.app/" target="_blank" class="project-link" aria-label="View project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Academic Advisor</h3>
+                        <p class="project-description">
+                            Web-based application designed to assist students in managing their academic journey. Features include semester scheduler, major selection tools, financial aid resources, and personalized study plans. Helps students plan courses, track progress, and make informed academic decisions.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://www.loom.com/share/3d70d1f388f04488a3652a91d2f98074" target="_blank" class="project-video-link">
+                            <img src="https://cdn.loom.com/sessions/thumbnails/3d70d1f388f04488a3652a91d2f98074-f122b3fe92ede634-full-play.gif" alt="FutureTech Summit 2025 Demo" class="project-thumbnail">
+                            <div class="play-overlay">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Watch Demo</span>
+                            </div>
+                        </a>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yashsanap14/futuretech-summit-2025.git" target="_blank" class="project-link" aria-label="View code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://yashsanap14.github.io/futuretech-summit-2025/" target="_blank" class="project-link" aria-label="View project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://www.loom.com/share/3d70d1f388f04488a3652a91d2f98074" target="_blank" class="project-link" aria-label="Watch video">
+                                    <i class="fas fa-video"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">FutureTech Summit 2025 🌟</h3>
+                        <p class="project-description">
+                            Modern, interactive website for the FutureTech Summit 2025 conference featuring dark/light mode toggle, dynamic RSVP form, and responsive design. Built with vanilla HTML, CSS, and JavaScript showcasing DOM manipulation and modern web development skills.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://www.loom.com/share/b4edc3e7ca1145ceab12d5f999c56b83" target="_blank" class="project-video-link">
+                            <img src="https://cdn.loom.com/sessions/thumbnails/b4edc3e7ca1145ceab12d5f999c56b83-1853418045bfe870-full-play.gif" alt="Pokemon Viewer Demo" class="project-thumbnail">
+                            <div class="play-overlay">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Watch Demo</span>
+                            </div>
+                        </a>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yashsanap14/Pokemon-Viewer-.git" target="_blank" class="project-link" aria-label="View code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.loom.com/share/b4edc3e7ca1145ceab12d5f999c56b83" target="_blank" class="project-link" aria-label="Watch video">
+                                    <i class="fas fa-video"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Pokemon Viewer 🐛⚡🎨</h3>
+                        <p class="project-description">
+                            Android app that displays a scrollable list of Pokemon from the PokeAPI with custom styling and theming. Features RecyclerView with 30+ Pokemon, large centered images, custom color schemes, and smooth image loading with Glide library. Includes downloadable fonts and custom themes.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">RecyclerView</span>
+                            <span class="tech-tag">Glide</span>
+                            <span class="tech-tag">PokeAPI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://github.com/yashsanap14/Water-Gauge-Segmentation-using-YOLO11-Ultralytics.git" target="_blank" class="project-video-link">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                <i class="fas fa-water"></i>
+                            </div>
+                        </a>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yashsanap14/Water-Gauge-Segmentation-using-YOLO11-Ultralytics.git" target="_blank" class="project-link" aria-label="View code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Water Gauge Segmentation with YOLO11</h3>
+                        <p class="project-description">
+                            Semantic segmentation project for water level gauges using YOLO11-seg and SAM2 models with Ultralytics. Processes 7,196 images to automatically identify and segment water gauge regions in field imagery. Features automated annotation creation, model training, and comparison with Roboflow annotations for environmental data extraction.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">YOLO11</span>
+                            <span class="tech-tag">SAM2</span>
+                            <span class="tech-tag">Ultralytics</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Jupyter Notebook</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://github.com/yashsanap14/instant_Market.git" target="_blank" class="project-video-link">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                <i class="fas fa-store"></i>
+                            </div>
+                        </a>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yashsanap14/instant_Market.git" target="_blank" class="project-link" aria-label="View code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Instant Market - GMU Student Marketplace</h3>
+                        <p class="project-description">
+                            Web-based marketplace platform designed for GMU students to buy and sell items within the university community. Features user authentication with student/seller roles, product listings, shopping cart, order history, AI-powered recommendations, search and filter functionality, secure payment processing, and seller dashboard with sales analytics.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap 5</span>
+                            <span class="tech-tag">AI Recommendations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06.</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        I'm always open to discussing new projects, creative ideas, or opportunities 
+                        to be part of your visions. Feel free to reach out!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:yashsanap1404@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Email</h4>
+                                <p>yashsanap1404@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="tel:+15716319400" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Phone</h4>
+                                <p>+1 (571) 631-9400</p>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Location</h4>
+                                <p>Fairfax, VA</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://www.linkedin.com/in/yash-sanap/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/yashsanap14" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link resume-link" aria-label="View Resume" onclick="event.preventDefault(); openResumeModal();">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Yash Sanap. All rights reserved.</p>
+                <p>Designed & Built with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="resume-modal">
+        <div class="resume-modal-content">
+            <div class="resume-modal-header">
+                <h3>Yash Sanap - Resume</h3>
+                <button class="resume-modal-close" onclick="closeResumeModal()" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="resume-modal-body">
+                <iframe src="https://drive.google.com/file/d/1Ey5gmcX3BpTuO9cH_yC80qUKDiPKYVx0/preview" frameborder="0" allow="autoplay"></iframe>
+            </div>
+            <div class="resume-modal-footer">
+                <a href="https://drive.google.com/uc?export=download&id=1Ey5gmcX3BpTuO9cH_yC80qUKDiPKYVx0" class="btn btn-primary" download="Yash_Sanap_Resume.pdf">
+                    <i class="fas fa-download"></i>
+                    <span>Download Resume</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
