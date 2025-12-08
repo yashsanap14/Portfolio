@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Yash Sanap - Professional Portfolio">
     <title>Yash Sanap | Portfolio</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Ctext x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='white' text-anchor='middle'%3EYS%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Ctext x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='white' text-anchor='middle'%3EYS%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -82,7 +86,8 @@
                         <a href="https://github.com/yashsanap14" target="_blank" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="resume-link" aria-label="View Resume" onclick="event.preventDefault(); openResumeModal();">
+                        <a href="#" class="resume-link" aria-label="View Resume"
+                            onclick="event.preventDefault(); openResumeModal();">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                         <a href="mailto:yashsanap1404@gmail.com" aria-label="Email">
@@ -92,38 +97,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <div class="floating-skills">
-                            <div class="floating-skill" data-skill="python">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <div class="floating-skill" data-skill="javascript">
-                                <i class="fab fa-js"></i>
-                            </div>
-                            <div class="floating-skill" data-skill="react">
-                                <i class="fab fa-react"></i>
-                            </div>
-                            <div class="floating-skill" data-skill="nodejs">
-                                <i class="fab fa-node-js"></i>
-                            </div>
-                            <div class="floating-skill" data-skill="java">
-                                <i class="fab fa-java"></i>
-                            </div>
-                            <div class="floating-skill" data-skill="git">
-                                <i class="fab fa-git-alt"></i>
-                            </div>
-                            <div class="floating-skill" data-skill="docker">
-                                <i class="fab fa-docker"></i>
-                            </div>
-                            <div class="floating-skill" data-skill="aws">
-                                <i class="fab fa-aws"></i>
-                            </div>
-                            <div class="floating-skill" data-skill="vue">
-                                <i class="fab fa-vue"></i>
-                            </div>
-                            <div class="floating-skill" data-skill="angular">
-                                <i class="fab fa-angular"></i>
-                            </div>
-                        </div>
+                        <div id="sphere-grid-container" class="sphere-grid-container"></div>
                     </div>
                 </div>
             </div>
@@ -146,12 +120,13 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a passionate developer with a strong foundation in software engineering and a keen interest 
-                        in creating innovative solutions. My journey in technology has been driven by curiosity and 
+                        I'm a passionate developer with a strong foundation in software engineering and a keen interest
+                        in creating innovative solutions. My journey in technology has been driven by curiosity and
                         a commitment to continuous learning.
                     </p>
                     <p>
-                        I enjoy working on challenging projects that push the boundaries of what's possible, and I'm always 
+                        I enjoy working on challenging projects that push the boundaries of what's possible, and I'm
+                        always
                         looking for opportunities to collaborate with talented individuals and teams.
                     </p>
                     <div class="about-highlights">
@@ -316,8 +291,11 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div class="company-logo-wrapper">
-                                <img src="Assets/VB-Bug-Fullcolor.png" alt="City of Virginia Beach" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="company-logo-fallback" style="display: none; width: 50px; height: 50px; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9rem;">VB</div>
+                                <img src="Assets/VB-Bug-Fullcolor.png" alt="City of Virginia Beach" class="company-logo"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="company-logo-fallback"
+                                    style="display: none; width: 50px; height: 50px; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9rem;">
+                                    VB</div>
                             </div>
                             <div class="job-header-info">
                                 <h3 class="job-title">Data Science Intern</h3>
@@ -327,10 +305,18 @@
                             <span class="timeline-date">Jun 2025 – Aug 2025</span>
                         </div>
                         <ul class="job-description">
-                            <li>Analyzed multi-month Sentinel-5P satellite imagery using Python geospatial libraries (GeoPandas, Rasterio) to map NO2 pollution across Virginia; identified seasonal emission trends and regional hotspots for environmental monitoring</li>
-                            <li>Built automated end-to-end image segmentation pipeline for reservoir water-level monitoring: integrated automated dataset labeling (Roboflow + Grounding DINO) and trained YOLOv11+SAMv2 models, achieving 95% detection precision and 90% mAP</li>
-                            <li>Implemented time-series forecasting with Nixtla's TimeGPT to predict coastal water levels from historical trends, enabling proactive flood-risk management and timely community alerts</li>
-                            <li>Orchestrated scalable data workflows on cloud infrastructure: leveraged AWS SageMaker Studio Lab and Coiled (Dask) to process NOAA National Water Model forecasts for distributed analysis</li>
+                            <li>Analyzed multi-month Sentinel-5P satellite imagery using Python geospatial libraries
+                                (GeoPandas, Rasterio) to map NO2 pollution across Virginia; identified seasonal emission
+                                trends and regional hotspots for environmental monitoring</li>
+                            <li>Built automated end-to-end image segmentation pipeline for reservoir water-level
+                                monitoring: integrated automated dataset labeling (Roboflow + Grounding DINO) and
+                                trained YOLOv11+SAMv2 models, achieving 95% detection precision and 90% mAP</li>
+                            <li>Implemented time-series forecasting with Nixtla's TimeGPT to predict coastal water
+                                levels from historical trends, enabling proactive flood-risk management and timely
+                                community alerts</li>
+                            <li>Orchestrated scalable data workflows on cloud infrastructure: leveraged AWS SageMaker
+                                Studio Lab and Coiled (Dask) to process NOAA National Water Model forecasts for
+                                distributed analysis</li>
                         </ul>
                         <div class="job-tags">
                             <span class="tag">Python</span>
@@ -347,8 +333,11 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div class="company-logo-wrapper">
-                                <img src="Assets/capgemini.png" alt="Capgemini" class="company-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="company-logo-fallback" style="display: none; width: 50px; height: 50px; background: #FF6B35; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9rem;">C</div>
+                                <img src="Assets/capgemini.png" alt="Capgemini" class="company-logo"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="company-logo-fallback"
+                                    style="display: none; width: 50px; height: 50px; background: #FF6B35; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9rem;">
+                                    C</div>
                             </div>
                             <div class="job-header-info">
                                 <h3 class="job-title">Data Scientist</h3>
@@ -358,10 +347,17 @@
                             <span class="timeline-date">Aug 2022 – Jun 2024</span>
                         </div>
                         <ul class="job-description">
-                            <li>Developed and optimized end-to-end data pipelines using Google Colab, Python, and SQL to process, analyze, and visualize large datasets; improved model inference speed and accuracy through workflow optimization</li>
-                            <li>Designed and deployed cloud-native machine learning solutions on AWS (EC2, S3, Lambda, RDS) for real-time analytics, reducing operational costs by 30% while ensuring scalability and security</li>
-                            <li>Built and managed REST APIs to serve ML model predictions, enabling seamless microservice integration and enhancing data-driven decision-making across applications</li>
-                            <li>Implemented NLP and LLM-powered conversational AI systems, collaborating with UX teams to create intuitive, AI-driven chatbot experiences using Agile methodologies</li>
+                            <li>Developed and optimized end-to-end data pipelines using Google Colab, Python, and SQL to
+                                process, analyze, and visualize large datasets; improved model inference speed and
+                                accuracy through workflow optimization</li>
+                            <li>Designed and deployed cloud-native machine learning solutions on AWS (EC2, S3, Lambda,
+                                RDS) for real-time analytics, reducing operational costs by 30% while ensuring
+                                scalability and security</li>
+                            <li>Built and managed REST APIs to serve ML model predictions, enabling seamless
+                                microservice integration and enhancing data-driven decision-making across applications
+                            </li>
+                            <li>Implemented NLP and LLM-powered conversational AI systems, collaborating with UX teams
+                                to create intuitive, AI-driven chatbot experiences using Agile methodologies</li>
                         </ul>
                         <div class="job-tags">
                             <span class="tag">Python</span>
@@ -389,11 +385,16 @@
                 <div class="cert-card">
                     <div class="cert-header">
                         <div class="cert-provider">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle" class="provider-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="provider-fallback" style="display: none; width: 60px; height: 60px; background: #F80000; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">O</div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle"
+                                class="provider-logo"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="provider-fallback"
+                                style="display: none; width: 60px; height: 60px; background: #F80000; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                                O</div>
                         </div>
                         <div class="cert-info">
-                            <h3 class="cert-title">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
+                            <h3 class="cert-title">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
+                            </h3>
                             <p class="cert-issuer">Oracle</p>
                         </div>
                     </div>
@@ -415,11 +416,16 @@
                 <div class="cert-card">
                     <div class="cert-header">
                         <div class="cert-provider">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle" class="provider-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="provider-fallback" style="display: none; width: 60px; height: 60px; background: #F80000; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">O</div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle"
+                                class="provider-logo"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="provider-fallback"
+                                style="display: none; width: 60px; height: 60px; background: #F80000; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                                O</div>
                         </div>
                         <div class="cert-info">
-                            <h3 class="cert-title">Oracle Cloud Infrastructure 2025 Certified Data Science Professional</h3>
+                            <h3 class="cert-title">Oracle Cloud Infrastructure 2025 Certified Data Science Professional
+                            </h3>
                             <p class="cert-issuer">Oracle</p>
                         </div>
                     </div>
@@ -485,8 +491,11 @@
                 <div class="cert-card">
                     <div class="cert-header">
                         <div class="cert-provider">
-                            <img src="https://www.datacamp.com/favicon.ico" alt="DataCamp" class="provider-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="provider-fallback" style="display: none; width: 60px; height: 60px; background: #05192D; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">DC</div>
+                            <img src="https://www.datacamp.com/favicon.ico" alt="DataCamp" class="provider-logo"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="provider-fallback"
+                                style="display: none; width: 60px; height: 60px; background: #05192D; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                                DC</div>
                         </div>
                         <div class="cert-info">
                             <h3 class="cert-title">AI Fundamentals</h3>
@@ -581,7 +590,9 @@
                 <div class="cert-card">
                     <div class="cert-header">
                         <div class="cert-provider">
-                            <div class="provider-fallback" style="display: flex; width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1rem;">CP</div>
+                            <div class="provider-fallback"
+                                style="display: flex; width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1rem;">
+                                CP</div>
                         </div>
                         <div class="cert-info">
                             <h3 class="cert-title">Intro to Android Development Course</h3>
@@ -616,8 +627,10 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <a href="https://www.loom.com/share/e54b47b45c7949f09aa93fb2efd340f2" target="_blank" class="project-video-link">
-                            <img src="https://cdn.loom.com/sessions/thumbnails/e54b47b45c7949f09aa93fb2efd340f2-18d75d43e4805736-full-play.gif" alt="SearchMind Demo" class="project-thumbnail">
+                        <a href="https://www.loom.com/share/e54b47b45c7949f09aa93fb2efd340f2" target="_blank"
+                            class="project-video-link">
+                            <img src="https://cdn.loom.com/sessions/thumbnails/e54b47b45c7949f09aa93fb2efd340f2-18d75d43e4805736-full-play.gif"
+                                alt="SearchMind Demo" class="project-thumbnail">
                             <div class="play-overlay">
                                 <i class="fas fa-play-circle"></i>
                                 <span>Watch Demo</span>
@@ -625,10 +638,12 @@
                         </a>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/yashsanap14/SearchMind.git" target="_blank" class="project-link" aria-label="View code">
+                                <a href="https://github.com/yashsanap14/SearchMind.git" target="_blank"
+                                    class="project-link" aria-label="View code">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://www.loom.com/share/e54b47b45c7949f09aa93fb2efd340f2" target="_blank" class="project-link" aria-label="Watch video">
+                                <a href="https://www.loom.com/share/e54b47b45c7949f09aa93fb2efd340f2" target="_blank"
+                                    class="project-link" aria-label="Watch video">
                                     <i class="fas fa-video"></i>
                                 </a>
                             </div>
@@ -637,7 +652,9 @@
                     <div class="project-content">
                         <h3 class="project-title">SearchMind 🔎🧠</h3>
                         <p class="project-description">
-                            AI-powered web search and summarization with citations. Type or dictate your query, SearchMind fetches results, summarizes with Gemini AI, and stores history in Cloudflare D1. Features voice input, text-to-speech, and numbered citations.
+                            AI-powered web search and summarization with citations. Type or dictate your query,
+                            SearchMind fetches results, summarizes with Gemini AI, and stores history in Cloudflare D1.
+                            Features voice input, text-to-speech, and numbered citations.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">React 19</span>
@@ -651,8 +668,10 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <a href="https://www.loom.com/share/00c744d6c9244b6bba52770cedf5d362" target="_blank" class="project-video-link">
-                            <img src="https://cdn.loom.com/sessions/thumbnails/00c744d6c9244b6bba52770cedf5d362-9a0a66018fd53bbc-full-play.gif" alt="UI Code Assistant Demo" class="project-thumbnail">
+                        <a href="https://www.loom.com/share/00c744d6c9244b6bba52770cedf5d362" target="_blank"
+                            class="project-video-link">
+                            <img src="https://cdn.loom.com/sessions/thumbnails/00c744d6c9244b6bba52770cedf5d362-9a0a66018fd53bbc-full-play.gif"
+                                alt="UI Code Assistant Demo" class="project-thumbnail">
                             <div class="play-overlay">
                                 <i class="fas fa-play-circle"></i>
                                 <span>Watch Demo</span>
@@ -660,13 +679,16 @@
                         </a>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/yashsanap14/UICoding_assistant.git" target="_blank" class="project-link" aria-label="View code">
+                                <a href="https://github.com/yashsanap14/UICoding_assistant.git" target="_blank"
+                                    class="project-link" aria-label="View code">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://mason.gmu.edu/~ppatil8" target="_blank" class="project-link" aria-label="View project">
+                                <a href="https://mason.gmu.edu/~ppatil8" target="_blank" class="project-link"
+                                    aria-label="View project">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="https://www.loom.com/share/00c744d6c9244b6bba52770cedf5d362" target="_blank" class="project-link" aria-label="Watch video">
+                                <a href="https://www.loom.com/share/00c744d6c9244b6bba52770cedf5d362" target="_blank"
+                                    class="project-link" aria-label="Watch video">
                                     <i class="fas fa-video"></i>
                                 </a>
                             </div>
@@ -675,7 +697,9 @@
                     <div class="project-content">
                         <h3 class="project-title">UI Code Assistant</h3>
                         <p class="project-description">
-                            An AI-like system that helps UI developers generate, analyze, and improve UI code. Features component generation, design analysis, code optimization, and accessibility checking. Supports multiple styling frameworks including Bootstrap and Tailwind CSS.
+                            An AI-like system that helps UI developers generate, analyze, and improve UI code. Features
+                            component generation, design analysis, code optimization, and accessibility checking.
+                            Supports multiple styling frameworks including Bootstrap and Tailwind CSS.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
@@ -688,17 +712,21 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <a href="https://academic-advisor-yashsanap14s-projects.vercel.app/" target="_blank" class="project-video-link">
-                            <div class="project-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <a href="https://academic-advisor-yashsanap14s-projects.vercel.app/" target="_blank"
+                            class="project-video-link">
+                            <div class="project-placeholder"
+                                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
                         </a>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/yashsanap14/Academic-Advisor.git" target="_blank" class="project-link" aria-label="View code">
+                                <a href="https://github.com/yashsanap14/Academic-Advisor.git" target="_blank"
+                                    class="project-link" aria-label="View code">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://academic-advisor-yashsanap14s-projects.vercel.app/" target="_blank" class="project-link" aria-label="View project">
+                                <a href="https://academic-advisor-yashsanap14s-projects.vercel.app/" target="_blank"
+                                    class="project-link" aria-label="View project">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
                             </div>
@@ -707,7 +735,10 @@
                     <div class="project-content">
                         <h3 class="project-title">Academic Advisor</h3>
                         <p class="project-description">
-                            Web-based application designed to assist students in managing their academic journey. Features include semester scheduler, major selection tools, financial aid resources, and personalized study plans. Helps students plan courses, track progress, and make informed academic decisions.
+                            Web-based application designed to assist students in managing their academic journey.
+                            Features include semester scheduler, major selection tools, financial aid resources, and
+                            personalized study plans. Helps students plan courses, track progress, and make informed
+                            academic decisions.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
@@ -719,8 +750,10 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <a href="https://www.loom.com/share/3d70d1f388f04488a3652a91d2f98074" target="_blank" class="project-video-link">
-                            <img src="https://cdn.loom.com/sessions/thumbnails/3d70d1f388f04488a3652a91d2f98074-f122b3fe92ede634-full-play.gif" alt="FutureTech Summit 2025 Demo" class="project-thumbnail">
+                        <a href="https://www.loom.com/share/3d70d1f388f04488a3652a91d2f98074" target="_blank"
+                            class="project-video-link">
+                            <img src="https://cdn.loom.com/sessions/thumbnails/3d70d1f388f04488a3652a91d2f98074-f122b3fe92ede634-full-play.gif"
+                                alt="FutureTech Summit 2025 Demo" class="project-thumbnail">
                             <div class="play-overlay">
                                 <i class="fas fa-play-circle"></i>
                                 <span>Watch Demo</span>
@@ -728,13 +761,16 @@
                         </a>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/yashsanap14/futuretech-summit-2025.git" target="_blank" class="project-link" aria-label="View code">
+                                <a href="https://github.com/yashsanap14/futuretech-summit-2025.git" target="_blank"
+                                    class="project-link" aria-label="View code">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://yashsanap14.github.io/futuretech-summit-2025/" target="_blank" class="project-link" aria-label="View project">
+                                <a href="https://yashsanap14.github.io/futuretech-summit-2025/" target="_blank"
+                                    class="project-link" aria-label="View project">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="https://www.loom.com/share/3d70d1f388f04488a3652a91d2f98074" target="_blank" class="project-link" aria-label="Watch video">
+                                <a href="https://www.loom.com/share/3d70d1f388f04488a3652a91d2f98074" target="_blank"
+                                    class="project-link" aria-label="Watch video">
                                     <i class="fas fa-video"></i>
                                 </a>
                             </div>
@@ -743,7 +779,9 @@
                     <div class="project-content">
                         <h3 class="project-title">FutureTech Summit 2025 🌟</h3>
                         <p class="project-description">
-                            Modern, interactive website for the FutureTech Summit 2025 conference featuring dark/light mode toggle, dynamic RSVP form, and responsive design. Built with vanilla HTML, CSS, and JavaScript showcasing DOM manipulation and modern web development skills.
+                            Modern, interactive website for the FutureTech Summit 2025 conference featuring dark/light
+                            mode toggle, dynamic RSVP form, and responsive design. Built with vanilla HTML, CSS, and
+                            JavaScript showcasing DOM manipulation and modern web development skills.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML5</span>
@@ -755,8 +793,10 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <a href="https://www.loom.com/share/b4edc3e7ca1145ceab12d5f999c56b83" target="_blank" class="project-video-link">
-                            <img src="https://cdn.loom.com/sessions/thumbnails/b4edc3e7ca1145ceab12d5f999c56b83-1853418045bfe870-full-play.gif" alt="Pokemon Viewer Demo" class="project-thumbnail">
+                        <a href="https://www.loom.com/share/b4edc3e7ca1145ceab12d5f999c56b83" target="_blank"
+                            class="project-video-link">
+                            <img src="https://cdn.loom.com/sessions/thumbnails/b4edc3e7ca1145ceab12d5f999c56b83-1853418045bfe870-full-play.gif"
+                                alt="Pokemon Viewer Demo" class="project-thumbnail">
                             <div class="play-overlay">
                                 <i class="fas fa-play-circle"></i>
                                 <span>Watch Demo</span>
@@ -764,10 +804,12 @@
                         </a>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/yashsanap14/Pokemon-Viewer-.git" target="_blank" class="project-link" aria-label="View code">
+                                <a href="https://github.com/yashsanap14/Pokemon-Viewer-.git" target="_blank"
+                                    class="project-link" aria-label="View code">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://www.loom.com/share/b4edc3e7ca1145ceab12d5f999c56b83" target="_blank" class="project-link" aria-label="Watch video">
+                                <a href="https://www.loom.com/share/b4edc3e7ca1145ceab12d5f999c56b83" target="_blank"
+                                    class="project-link" aria-label="Watch video">
                                     <i class="fas fa-video"></i>
                                 </a>
                             </div>
@@ -776,7 +818,10 @@
                     <div class="project-content">
                         <h3 class="project-title">Pokemon Viewer 🐛⚡🎨</h3>
                         <p class="project-description">
-                            Android app that displays a scrollable list of Pokemon from the PokeAPI with custom styling and theming. Features RecyclerView with 30+ Pokemon, large centered images, custom color schemes, and smooth image loading with Glide library. Includes downloadable fonts and custom themes.
+                            Android app that displays a scrollable list of Pokemon from the PokeAPI with custom styling
+                            and theming. Features RecyclerView with 30+ Pokemon, large centered images, custom color
+                            schemes, and smooth image loading with Glide library. Includes downloadable fonts and custom
+                            themes.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Android</span>
@@ -789,14 +834,17 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <a href="https://github.com/yashsanap14/Water-Gauge-Segmentation-using-YOLO11-Ultralytics.git" target="_blank" class="project-video-link">
-                            <div class="project-placeholder" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <a href="https://github.com/yashsanap14/Water-Gauge-Segmentation-using-YOLO11-Ultralytics.git"
+                            target="_blank" class="project-video-link">
+                            <div class="project-placeholder"
+                                style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                                 <i class="fas fa-water"></i>
                             </div>
                         </a>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/yashsanap14/Water-Gauge-Segmentation-using-YOLO11-Ultralytics.git" target="_blank" class="project-link" aria-label="View code">
+                                <a href="https://github.com/yashsanap14/Water-Gauge-Segmentation-using-YOLO11-Ultralytics.git"
+                                    target="_blank" class="project-link" aria-label="View code">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -805,7 +853,10 @@
                     <div class="project-content">
                         <h3 class="project-title">Water Gauge Segmentation with YOLO11</h3>
                         <p class="project-description">
-                            Semantic segmentation project for water level gauges using YOLO11-seg and SAM2 models with Ultralytics. Processes 7,196 images to automatically identify and segment water gauge regions in field imagery. Features automated annotation creation, model training, and comparison with Roboflow annotations for environmental data extraction.
+                            Semantic segmentation project for water level gauges using YOLO11-seg and SAM2 models with
+                            Ultralytics. Processes 7,196 images to automatically identify and segment water gauge
+                            regions in field imagery. Features automated annotation creation, model training, and
+                            comparison with Roboflow annotations for environmental data extraction.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
@@ -819,14 +870,17 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <a href="https://github.com/yashsanap14/instant_Market.git" target="_blank" class="project-video-link">
-                            <div class="project-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <a href="https://github.com/yashsanap14/instant_Market.git" target="_blank"
+                            class="project-video-link">
+                            <div class="project-placeholder"
+                                style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                                 <i class="fas fa-store"></i>
                             </div>
                         </a>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/yashsanap14/instant_Market.git" target="_blank" class="project-link" aria-label="View code">
+                                <a href="https://github.com/yashsanap14/instant_Market.git" target="_blank"
+                                    class="project-link" aria-label="View code">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -835,7 +889,10 @@
                     <div class="project-content">
                         <h3 class="project-title">Instant Market - GMU Student Marketplace</h3>
                         <p class="project-description">
-                            Web-based marketplace platform designed for GMU students to buy and sell items within the university community. Features user authentication with student/seller roles, product listings, shopping cart, order history, AI-powered recommendations, search and filter functionality, secure payment processing, and seller dashboard with sales analytics.
+                            Web-based marketplace platform designed for GMU students to buy and sell items within the
+                            university community. Features user authentication with student/seller roles, product
+                            listings, shopping cart, order history, AI-powered recommendations, search and filter
+                            functionality, secure payment processing, and seller dashboard with sales analytics.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML5</span>
@@ -861,7 +918,7 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <p class="contact-intro">
-                        I'm always open to discussing new projects, creative ideas, or opportunities 
+                        I'm always open to discussing new projects, creative ideas, or opportunities
                         to be part of your visions. Feel free to reach out!
                     </p>
                     <div class="contact-methods">
@@ -900,7 +957,8 @@
                         <a href="https://github.com/yashsanap14" target="_blank" class="social-link">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="social-link resume-link" aria-label="View Resume" onclick="event.preventDefault(); openResumeModal();">
+                        <a href="#" class="social-link resume-link" aria-label="View Resume"
+                            onclick="event.preventDefault(); openResumeModal();">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </div>
@@ -951,10 +1009,12 @@
                 </button>
             </div>
             <div class="resume-modal-body">
-                <iframe src="https://drive.google.com/file/d/1Ey5gmcX3BpTuO9cH_yC80qUKDiPKYVx0/preview" frameborder="0" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1Ey5gmcX3BpTuO9cH_yC80qUKDiPKYVx0/preview" frameborder="0"
+                    allow="autoplay"></iframe>
             </div>
             <div class="resume-modal-footer">
-                <a href="https://drive.google.com/uc?export=download&id=1Ey5gmcX3BpTuO9cH_yC80qUKDiPKYVx0" class="btn btn-primary" download="Yash_Sanap_Resume.pdf">
+                <a href="https://drive.google.com/uc?export=download&id=1Ey5gmcX3BpTuO9cH_yC80qUKDiPKYVx0"
+                    class="btn btn-primary" download="Yash_Sanap_Resume.pdf">
                     <i class="fas fa-download"></i>
                     <span>Download Resume</span>
                 </a>
@@ -969,5 +1029,5 @@
 
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
