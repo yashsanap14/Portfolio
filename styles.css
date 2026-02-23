@@ -2,42 +2,91 @@
    CSS Variables & Reset
    ============================================ */
 
+/* ── Netflix-style Design Tokens ─────────────────── */
 :root {
-    /* Light Theme Colors */
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8f9fa;
-    --bg-tertiary: #e9ecef;
-    --text-primary: #212529;
-    --text-secondary: #6c757d;
+    --card: #f9fafb;
+    --ring: #e50914;
+    --input: #e5e7eb;
+    --muted: #f9fafb;
+    --accent: #fff1f2;
+    --border: #e5e7eb;
+    --radius: 0.25rem;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+    --popover: #ffffff;
+    --primary: #e50914;
+    --spacing: 0.25rem;
+    --font-mono: "Courier New", monospace;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --secondary: #f3f4f6;
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, .05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04);
+    --background: #ffffff;
+    --foreground: #000000;
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, .25);
+    --destructive: #ef4444;
+    --card-foreground: #171717;
+    --muted-foreground: #6b7280;
+    --accent-foreground: #92400e;
+    --primary-foreground: #ffffff;
+    --secondary-foreground: #4b5563;
+
+    /* ── Portfolio variable aliases ── */
+    --bg-primary: var(--background);
+    --bg-secondary: var(--secondary);
+    --bg-tertiary: var(--muted);
+    --text-primary: var(--foreground);
+    --text-secondary: var(--muted-foreground);
     --text-tertiary: #adb5bd;
-    --accent-primary: #6366f1;
-    --accent-secondary: #8b5cf6;
-    --accent-hover: #4f46e5;
-    --border-color: #dee2e6;
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
-    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
-    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    --gradient-secondary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --accent-primary: var(--primary);
+    --accent-secondary: #b0060f;
+    --accent-hover: #c2070f;
+    --border-color: var(--border);
+    --gradient-primary: linear-gradient(135deg, #e50914 0%, #b0060f 100%);
+    --gradient-secondary: linear-gradient(135deg, #e50914 0%, #7f0007 100%);
 }
 
 [data-theme="dark"] {
-    /* Dark Theme Colors */
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #14141f;
-    --bg-tertiary: #1a1a2e;
-    --text-primary: #e4e4e7;
-    --text-secondary: #a1a1aa;
+    --card: #1a1a1a;
+    --ring: #e50914;
+    --input: #404040;
+    --muted: #2b2b2b;
+    --accent: #e50914;
+    --border: #404040;
+    --radius: 0.25rem;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, .3), 0 1px 2px 0 rgba(0, 0, 0, .2);
+    --popover: #1a1a1a;
+    --primary: #e50914;
+    --spacing: 0.25rem;
+    --secondary: #2b2b2b;
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, .4), 0 4px 6px -2px rgba(0, 0, 0, .3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, .4), 0 2px 4px -1px rgba(0, 0, 0, .3);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, .3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, .5), 0 10px 10px -5px rgba(0, 0, 0, .4);
+    --background: #141414;
+    --foreground: #ffffff;
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, .8);
+    --destructive: #e50914;
+    --card-foreground: #ffffff;
+    --muted-foreground: #a3a3a3;
+    --accent-foreground: #ffffff;
+    --primary-foreground: #ffffff;
+    --secondary-foreground: #a3a3a3;
+
+    /* ── Portfolio variable aliases ── */
+    --bg-primary: var(--background);
+    --bg-secondary: var(--card);
+    --bg-tertiary: var(--muted);
+    --text-primary: var(--foreground);
+    --text-secondary: var(--muted-foreground);
     --text-tertiary: #71717a;
-    --accent-primary: #818cf8;
-    --accent-secondary: #a78bfa;
-    --accent-hover: #6366f1;
-    --border-color: #27272a;
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.6);
+    --accent-primary: var(--primary);
+    --accent-secondary: #ff1e2b;
+    --accent-hover: #c2070f;
+    --border-color: var(--border);
+    --gradient-primary: linear-gradient(135deg, #e50914 0%, #b0060f 100%);
+    --gradient-secondary: linear-gradient(135deg, #e50914 0%, #7f0007 100%);
 }
 
 * {
@@ -286,10 +335,12 @@ body {
 
 .name-line {
     display: block;
-    background: var(--gradient-primary);
+    background: linear-gradient(90deg, #e50914, #ff4d57, #ffffff, #ff4d57, #e50914);
+    background-size: 300% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: netflix-shimmer 6s ease-in-out infinite;
 }
 
 .hero-title {
@@ -1398,7 +1449,7 @@ section {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-primary);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.1);
 }
 
 .form-group textarea {
@@ -1785,4 +1836,161 @@ section {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+/* ============================================
+   Scroll Progress Bar
+   ============================================ */
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #e50914, #b0060f, #ff1e2b, #e50914);
+    background-size: 200% 100%;
+    animation: progress-shimmer 2s linear infinite;
+    z-index: 9999;
+    transition: width 0.1s linear;
+    border-radius: 0 2px 2px 0;
+}
+
+@keyframes progress-shimmer {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+/* ============================================
+   Netflix-style Hero Name
+   ============================================ */
+
+.name-line {
+    display: block;
+    background: linear-gradient(90deg, #e50914, #ff4d57, #ffffff, #ff4d57, #e50914);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: netflix-shimmer 6s ease-in-out infinite;
+}
+
+@keyframes netflix-shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ============================================
+   Stats Counter (About Section)
+   ============================================ */
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.25rem 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-primary);
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #e50914, #b0060f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ============================================
+   Nav Active Sliding Pill Indicator
+   ============================================ */
+
+.nav-menu {
+    position: relative;
+}
+
+#nav-indicator {
+    position: absolute;
+    bottom: -6px;
+    height: 3px;
+    background: linear-gradient(90deg, #e50914, #b0060f);
+    border-radius: 999px;
+    transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* hide the old ::after underline now that we have the pill */
+.nav-link::after {
+    display: none;
+}
+
+/* ============================================
+   Lazy Image Fade-In
+   ============================================ */
+
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* skill-item & job tag hover glow */
+.tag:hover {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.35);
+    transform: translateY(-2px);
+}
+
+.tag {
+    transition: all 0.25s ease;
+    cursor: default;
 }

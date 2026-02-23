@@ -98,49 +98,96 @@ function setActiveNavLink() {
 window.addEventListener('scroll', setActiveNavLink);
 
 // ============================================
-// Typing Animation
+// Text Scramble Animation
 // ============================================
 
 const typingText = document.getElementById('typing-text');
-const typingStrings = [
+const scrambleTitles = [
+    'ML Engineer',
     'Data Scientist',
-    'Android Developer',
+    'AI Developer',
     'Full Stack Developer',
-    'Software Engineer'
+    'Software Engineer',
 ];
 
-let stringIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typingSpeed = 100;
+const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
+const SCRAMBLE_SPEED = 35;   // ms per frame
+const PAUSE_AFTER = 2200;  // ms to hold the fully-resolved text
+const PAUSE_BEFORE = 400;   // ms gap before next title starts
 
-function typeText() {
-    const currentString = typingStrings[stringIndex];
+let scrambleIndex = 0;
 
-    if (isDeleting) {
-        typingText.textContent = currentString.substring(0, charIndex - 1);
-        charIndex--;
-        typingSpeed = 50;
-    } else {
-        typingText.textContent = currentString.substring(0, charIndex + 1);
-        charIndex++;
-        typingSpeed = 100;
-    }
-
-    if (!isDeleting && charIndex === currentString.length) {
-        typingSpeed = 2000; // Pause at end
-        isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        stringIndex = (stringIndex + 1) % typingStrings.length;
-        typingSpeed = 500; // Pause before typing next
-    }
-
-    setTimeout(typeText, typingSpeed);
+function randomChar() {
+    return CHARS[Math.floor(Math.random() * CHARS.length)];
 }
 
-// Start typing animation after a short delay
-setTimeout(typeText, 1000);
+function scrambleIn(text, onDone) {
+    const totalFrames = Math.round((text.length * 1.4 * SCRAMBLE_SPEED) / SCRAMBLE_SPEED);
+    let frame = 0;
+
+    const id = setInterval(() => {
+        const progress = frame / totalFrames;
+        let result = '';
+        for (let i = 0; i < text.length; i++) {
+            if (text[i] === ' ') { result += ' '; continue; }
+            if (progress * text.length > i) {
+                result += text[i];
+            } else {
+                result += randomChar();
+            }
+        }
+        typingText.textContent = result;
+        frame++;
+        if (frame > totalFrames) {
+            clearInterval(id);
+            typingText.textContent = text;
+            onDone();
+        }
+    }, SCRAMBLE_SPEED);
+}
+
+function scrambleOut(text, onDone) {
+    const totalFrames = Math.round((text.length * 1.0 * SCRAMBLE_SPEED) / SCRAMBLE_SPEED);
+    let frame = 0;
+
+    const id = setInterval(() => {
+        const progress = frame / totalFrames;
+        let result = '';
+        for (let i = 0; i < text.length; i++) {
+            if (text[i] === ' ') { result += ' '; continue; }
+            if (progress * text.length > i) {
+                result += randomChar();
+            } else {
+                result += text[i];
+            }
+        }
+        typingText.textContent = result;
+        frame++;
+        if (frame > totalFrames) {
+            clearInterval(id);
+            typingText.textContent = '';
+            onDone();
+        }
+    }, SCRAMBLE_SPEED);
+}
+
+function runScrambleCycle() {
+    const text = scrambleTitles[scrambleIndex];
+    scrambleIn(text, () => {
+        // Hold the fully-resolved text
+        setTimeout(() => {
+            scrambleOut(text, () => {
+                // Pause before next title
+                scrambleIndex = (scrambleIndex + 1) % scrambleTitles.length;
+                setTimeout(runScrambleCycle, PAUSE_BEFORE);
+            });
+        }, PAUSE_AFTER);
+    });
+}
+
+// Kick off after a short initial delay
+setTimeout(runScrambleCycle, 800);
+
 
 // ============================================
 // Smooth Scrolling
@@ -500,8 +547,129 @@ if (scrollToTopButton) {
 // Console Message
 // ============================================
 
-console.log('%c👋 Hello! Thanks for checking out my portfolio!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
-console.log('%cWant to connect? Feel free to reach out!', 'font-size: 14px; color: #6c757d;');
+console.log('%c👋 Hello! Thanks for checking out my portfolio!', 'font-size: 20px; font-weight: bold; color: #e50914;');
+console.log('%cWant to connect? Feel free to reach out!', 'font-size: 14px; color: #a3a3a3;');
+
+// ============================================
+// Scroll Progress Bar
+// ============================================
+
+const scrollProgressBar = document.getElementById('scroll-progress');
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgressBar.style.width = pct + '%';
+}, { passive: true });
+
+// ============================================
+// Animated Stats Counter
+// ============================================
+
+function animateCounter(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1800;
+    const step = 16;
+    const totalSteps = duration / step;
+    let current = 0;
+
+    const timer = setInterval(() => {
+        current++;
+        const value = Math.round(easeOutQuad(current, 0, target, totalSteps));
+        el.textContent = value + suffix;
+        if (current >= totalSteps) {
+            clearInterval(timer);
+            el.textContent = target + suffix;
+        }
+    }, step);
+}
+
+function easeOutQuad(t, b, c, d) {
+    t /= d;
+    return -c * t * (t - 2) + b;
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll('.stat-number');
+            counters.forEach(animateCounter);
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.4 });
+
+const aboutStats = document.querySelector('.about-stats');
+if (aboutStats) statsObserver.observe(aboutStats);
+
+// ============================================
+// Nav Sliding Indicator
+// ============================================
+
+const navIndicator = document.getElementById('nav-indicator');
+const navMenuEl = document.getElementById('nav-menu');
+
+function moveIndicatorTo(linkEl) {
+    if (!linkEl || !navMenuEl || !navIndicator) return;
+    const menuRect = navMenuEl.getBoundingClientRect();
+    const linkRect = linkEl.getBoundingClientRect();
+    navIndicator.style.left = (linkRect.left - menuRect.left) + 'px';
+    navIndicator.style.width = linkRect.width + 'px';
+    navIndicator.style.opacity = '1';
+}
+
+// Move on hover
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('mouseenter', () => moveIndicatorTo(link));
+});
+navMenuEl && navMenuEl.addEventListener('mouseleave', () => {
+    // Snap back to active section
+    const active = document.querySelector('.nav-link.active');
+    if (active) {
+        moveIndicatorTo(active);
+    } else {
+        navIndicator.style.opacity = '0';
+    }
+});
+
+// Keep indicator in sync with active section on scroll
+const originalSetActive = setActiveNavLink;
+window.addEventListener('scroll', () => {
+    const active = document.querySelector('.nav-link.active');
+    if (active) moveIndicatorTo(active);
+}, { passive: true });
+
+// Initial position
+window.addEventListener('load', () => {
+    const active = document.querySelector('.nav-link.active');
+    if (active) moveIndicatorTo(active);
+});
+
+// ============================================
+// Lazy Image Fade-In
+// ============================================
+
+const lazyImgs = document.querySelectorAll('img[loading="lazy"]');
+const imgObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.complete) {
+                img.classList.add('loaded');
+            } else {
+                img.addEventListener('load', () => img.classList.add('loaded'));
+                img.addEventListener('error', () => img.classList.add('loaded'));
+            }
+            obs.unobserve(img);
+        }
+    });
+}, { threshold: 0.1 });
+
+lazyImgs.forEach(img => imgObserver.observe(img));
+
+
 
 // ============================================
 // 3D Sphere Grid System

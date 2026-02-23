@@ -17,6 +17,9 @@
 </head>
 
 <body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -32,6 +35,7 @@
                     <li><a href="#certifications" class="nav-link">Certifications</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <div id="nav-indicator"></div>
                 </ul>
                 <div class="nav-actions">
                     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
@@ -150,6 +154,22 @@
                                 <h3>Collaboration</h3>
                                 <p>Working effectively in team environments</p>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats Counter -->
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="10" data-suffix="+">0</div>
+                            <div class="stat-label">Projects Built</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Internships</div>
                         </div>
                     </div>
                 </div>
@@ -514,7 +534,7 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div class="company-logo-wrapper">
-                                <img src="Assets/vims-logo.png" alt="VIMS" class="company-logo"
+                                <img src="Assets/vims-logo.png" alt="VIMS" class="company-logo" loading="lazy"
                                     style="background: white; border-radius: 8px; padding: 4px;"
                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                 <div class="company-logo-fallback"
@@ -555,9 +575,10 @@
                         <div class="timeline-header">
                             <div class="company-logo-wrapper">
                                 <img src="Assets/VB-Bug-Fullcolor.png" alt="City of Virginia Beach" class="company-logo"
+                                    loading="lazy"
                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                 <div class="company-logo-fallback"
-                                    style="display: none; width: 50px; height: 50px; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9rem;">
+                                    style="display: none; width: 50px; height: 50px; background: linear-gradient(135deg, #7f0007 0%, #e50914 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9rem;">
                                     VB</div>
                             </div>
                             <div class="job-header-info">
@@ -593,7 +614,7 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div class="company-logo-wrapper">
-                                <img src="Assets/capgemini.png" alt="Capgemini" class="company-logo"
+                                <img src="Assets/capgemini.png" alt="Capgemini" class="company-logo" loading="lazy"
                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                 <div class="company-logo-fallback"
                                     style="display: none; width: 50px; height: 50px; background: #FF6B35; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9rem;">
@@ -647,7 +668,7 @@
                                 alt="Hugging Face" class="provider-logo"
                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="provider-fallback"
-                                style="display: none; width: 60px; height: 60px; background: linear-gradient(135deg, #FFD21E 0%, #FF6B6B 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                                style="display: none; width: 60px; height: 60px; background: linear-gradient(135deg, #e50914 0%, #b0060f 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
                                 HF</div>
                         </div>
                         <div class="cert-info">
@@ -674,7 +695,7 @@
                                 alt="JPMorganChase" class="provider-logo"
                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="provider-fallback"
-                                style="display: none; width: 60px; height: 60px; background: #0066CC; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                                style="display: none; width: 60px; height: 60px; background: #0a0a14; border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
                                 JPM</div>
                         </div>
                         <div class="cert-info">
@@ -904,7 +925,7 @@
                     <div class="cert-header">
                         <div class="cert-provider">
                             <div class="provider-fallback"
-                                style="display: flex; width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1rem;">
+                                style="display: flex; width: 60px; height: 60px; background: linear-gradient(135deg, #e50914 0%, #7f0007 100%); border-radius: 8px; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1rem;">
                                 CP</div>
                         </div>
                         <div class="cert-info">
