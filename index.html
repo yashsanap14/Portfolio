@@ -33,6 +33,7 @@
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                     <div id="nav-indicator"></div>
@@ -950,11 +951,98 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05.</span>
+                <h2 class="section-title">Education</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="education-timeline">
+
+                <!-- George Mason University -->
+                <div class="edu-card">
+                    <div class="edu-icon-wrapper">
+                        <img src="Assets/gmu-logo.png"
+                            alt="George Mason University"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            class="edu-school-logo">
+                        <div class="edu-logo-fallback" style="display:none;">GMU</div>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <div class="edu-title-block">
+                                <h3 class="edu-degree">Master of Science in Computer Science</h3>
+                                <span class="edu-school">George Mason University</span>
+                                <span class="edu-location"><i class="fas fa-map-marker-alt"></i> Fairfax, VA</span>
+                            </div>
+                            <span class="edu-date">Aug 2024 – May 2026</span>
+                        </div>
+                        <div class="edu-details">
+                            <div class="edu-gpa">
+                                <i class="fas fa-star"></i>
+                                <span>GPA: 3.7 / 4.0</span>
+                            </div>
+                            <div class="edu-courses">
+                                <p class="edu-courses-label">Relevant Coursework:</p>
+                                <div class="edu-tags">
+                                    <span class="edu-tag">Machine Learning</span>
+                                    <span class="edu-tag">Deep Learning</span>
+                                    <span class="edu-tag">Computer Vision</span>
+                                    <span class="edu-tag">Natural Language Processing</span>
+                                    <span class="edu-tag">Cloud Computing</span>
+                                    <span class="edu-tag">Big Data Analytics</span>
+                                    <span class="edu-tag">Algorithms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previous Degree -->
+                <div class="edu-card">
+                    <div class="edu-icon-wrapper">
+                        <img src="Assets/mumbai-university-logo.png"
+                            alt="University of Mumbai"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            class="edu-school-logo edu-school-logo--mono">
+                        <div class="edu-logo-fallback" style="display:none; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">MU</div>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <div class="edu-title-block">
+                                <h3 class="edu-degree">Bachelor of Engineering in Computer Engineering</h3>
+                                <span class="edu-school">University of Mumbai</span>
+                                <span class="edu-location"><i class="fas fa-map-marker-alt"></i> Mumbai, India</span>
+                            </div>
+                            <span class="edu-date">Aug 2018 – May 2022</span>
+                        </div>
+                        <div class="edu-details">
+                            <div class="edu-courses">
+                                <p class="edu-courses-label">Relevant Coursework:</p>
+                                <div class="edu-tags">
+                                    <span class="edu-tag">Data Structures &amp; Algorithms</span>
+                                    <span class="edu-tag">Database Management</span>
+                                    <span class="edu-tag">Operating Systems</span>
+                                    <span class="edu-tag">Software Engineering</span>
+                                    <span class="edu-tag">Computer Networks</span>
+                                    <span class="edu-tag">Artificial Intelligence</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-number">05.</span>
+                <span class="section-number">06.</span>
                 <h2 class="section-title">Featured Projects</h2>
                 <div class="title-line"></div>
             </div>
@@ -1335,14 +1423,63 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Dashboards Subsection -->
+            <div class="subsection-header">
+                <i class="fas fa-chart-bar subsection-icon"></i>
+                <h3 class="subsection-title">Dashboards</h3>
+                <div class="subsection-line"></div>
+            </div>
+            <div class="dashboards-grid">
+
+                <!-- Airbnb NYC Dashboard -->
+                <div class="dashboard-card" onclick="openDashboardModal('Assets/airbnb-dashboard.png', 'NYC Airbnb Analytics Dashboard')">
+                    <div class="dashboard-image-wrapper">
+                        <img src="Assets/airbnb-dashboard.png" alt="NYC Airbnb Analytics Dashboard" class="dashboard-img" loading="lazy">
+                        <div class="dashboard-overlay">
+                            <div class="dashboard-overlay-content">
+                                <i class="fas fa-expand-alt"></i>
+                                <span>View Full Dashboard</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-content">
+                        <h4 class="dashboard-title">NYC Airbnb Analytics Dashboard 🏠📊</h4>
+                        <p class="dashboard-description">
+                            Comprehensive Tableau dashboard analyzing 37,457 Airbnb listings across NYC's five boroughs.
+                            Features geospatial pricing maps, booking trends by neighbourhood group and room type,
+                            host performance rankings, seasonal demand patterns, and cross-borough comparative analysis.
+                        </p>
+                        <div class="dashboard-tags">
+                            <span class="dashboard-tag">Tableau</span>
+                            <span class="dashboard-tag">Data Visualization</span>
+                            <span class="dashboard-tag">Geospatial Analysis</span>
+                            <span class="dashboard-tag">NYC Open Data</span>
+                            <span class="dashboard-tag">Business Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Dashboard Lightbox Modal -->
+    <div id="dashboard-modal" class="dashboard-modal" onclick="closeDashboardModal()">
+        <div class="dashboard-modal-content" onclick="event.stopPropagation()">
+            <button class="dashboard-modal-close" onclick="closeDashboardModal()" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="dashboard-modal-img" src="" alt="" class="dashboard-modal-img">
+            <p id="dashboard-modal-caption" class="dashboard-modal-caption"></p>
+        </div>
+    </div>
+
+
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-number">06.</span>
+                <span class="section-number">07.</span>
                 <h2 class="section-title">Get In Touch</h2>
                 <div class="title-line"></div>
             </div>

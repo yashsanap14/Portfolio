@@ -1118,3 +1118,35 @@ window.addEventListener('beforeunload', () => {
     }
 });
 
+// ============================================
+// Dashboard Lightbox Modal
+// ============================================
+
+function openDashboardModal(imgSrc, caption) {
+    const modal = document.getElementById('dashboard-modal');
+    const img   = document.getElementById('dashboard-modal-img');
+    const cap   = document.getElementById('dashboard-modal-caption');
+    if (!modal || !img) return;
+    img.src = imgSrc;
+    img.alt = caption;
+    if (cap) cap.textContent = caption;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeDashboardModal() {
+    const modal = document.getElementById('dashboard-modal');
+    if (!modal) return;
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close dashboard modal on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('dashboard-modal');
+        if (modal && modal.classList.contains('active')) {
+            closeDashboardModal();
+        }
+    }
+});
