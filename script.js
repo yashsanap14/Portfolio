@@ -225,8 +225,91 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// ============================================
+// Skills Marquee
+// ============================================
+
+function createSkillIcon(icon) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'skill-badge__icon';
+
+    if (icon.type === 'img') {
+        const img = document.createElement('img');
+        img.src = icon.src;
+        img.alt = icon.alt || '';
+        img.loading = 'lazy';
+        wrapper.appendChild(img);
+    } else {
+        const iconEl = document.createElement('i');
+        iconEl.className = `${icon.type} ${icon.class}`;
+        if (icon.color) {
+            iconEl.style.color = icon.color;
+        }
+        wrapper.appendChild(iconEl);
+    }
+
+    return wrapper;
+}
+
+function createSkillBadge(skill) {
+    const badge = document.createElement('div');
+    badge.className = 'skill-badge';
+    badge.setAttribute('role', 'listitem');
+    badge.appendChild(createSkillIcon(skill.icon));
+
+    const name = document.createElement('span');
+    name.className = 'skill-badge__name';
+    name.textContent = skill.name;
+    badge.appendChild(name);
+
+    return badge;
+}
+
+function initSkillsMarquee() {
+    const root = document.getElementById('skills-content');
+    if (!root || typeof SKILL_CATEGORIES === 'undefined') return;
+
+    SKILL_CATEGORIES.forEach((category) => {
+        const categoryEl = document.createElement('div');
+        categoryEl.className = 'skills-category skills-category--marquee';
+
+        const title = document.createElement('h3');
+        title.className = 'category-title';
+        title.innerHTML = `<i class="${category.icon}" aria-hidden="true"></i> ${category.title}`;
+        categoryEl.appendChild(title);
+
+        const marquee = document.createElement('div');
+        marquee.className = 'skills-marquee';
+
+        const viewport = document.createElement('div');
+        viewport.className = 'skills-marquee__viewport';
+
+        const track = document.createElement('div');
+        track.className = 'skills-marquee__track';
+        track.setAttribute('role', 'list');
+        if (category.direction === 'right') {
+            track.classList.add('skills-marquee__track--reverse');
+        }
+        track.style.setProperty('--duration', `${category.speed}s`);
+
+        category.skills.forEach((skill) => {
+            track.appendChild(createSkillBadge(skill));
+        });
+        category.skills.forEach((skill) => {
+            track.appendChild(createSkillBadge(skill));
+        });
+
+        viewport.appendChild(track);
+        marquee.appendChild(viewport);
+        categoryEl.appendChild(marquee);
+        root.appendChild(categoryEl);
+    });
+}
+
 // Observe elements for animation - slide up from bottom
 document.addEventListener('DOMContentLoaded', () => {
+    initSkillsMarquee();
+
     // Section headers
     const sectionHeaders = document.querySelectorAll('.section-header');
     sectionHeaders.forEach((header, index) => {
@@ -256,18 +339,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Skills section
     const skillsCategories = document.querySelectorAll('.skills-category');
-    const skillItems = document.querySelectorAll('.skill-item');
 
     skillsCategories.forEach((category, index) => {
         category.classList.add('fade-in');
         category.style.transitionDelay = `${index * 0.15}s`;
         observer.observe(category);
-    });
-
-    skillItems.forEach((item, index) => {
-        item.classList.add('fade-in');
-        item.style.transitionDelay = `${(index % 8) * 0.05}s`;
-        observer.observe(item);
     });
 
     // Experience timeline
@@ -279,6 +355,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Certifications
+    const certProviderSections = document.querySelectorAll('.cert-provider-section');
+    certProviderSections.forEach((section, index) => {
+        section.classList.add('fade-in');
+        section.style.transitionDelay = `${index * 0.15}s`;
+        observer.observe(section);
+    });
+
     const certCards = document.querySelectorAll('.cert-card');
     certCards.forEach((card, index) => {
         card.classList.add('fade-in');

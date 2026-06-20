@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-accent: hsl(160 100% 45%);
+  --color-accent-hover: hsl(180 90% 30%);
+  --color-accent-light: hsl(170 100% 80%);
+  --color-accent-dark: hsl(200 100% 20%);
+  --color-surface: hsl(170 40% 98%);
+  --color-surface-2: hsl(170 30% 94%);
+  --color-surface-3: hsl(160 25% 88%);
+  --color-border: hsl(180 30% 85%);
+  --color-text: hsl(200 100% 12%);
+  --color-text-muted: hsl(200 40% 38%);
+  --animate-marquee: marquee var(--duration, 30s) linear infinite;
+  --animate-marquee-reverse: marquee-reverse var(--duration, 30s) linear infinite;
+}
+
+.dark {
+  --color-surface: hsl(200 100% 8%);
+  --color-surface-2: hsl(200 80% 12%);
+  --color-surface-3: hsl(200 70% 16%);
+  --color-border: hsl(200 50% 22%);
+  --color-text: hsl(170 30% 95%);
+  --color-text-muted: hsl(170 20% 68%);
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
